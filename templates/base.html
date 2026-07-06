@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RISE AI — Resume, Interview &amp; Skill Enhancement AI powered by IBM watsonx Orchestrate." />
+    <meta name="theme-color" content="#020408" />
+    <title>{% block title %}RISE AI — IBM watsonx Career Assistant{% endblock %}</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+    <!-- RISE AI Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════
+         NAVIGATION
+    ═══════════════════════════════════════════════════ -->
+    <nav class="navbar-rise">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between w-100">
+
+                <!-- Brand -->
+                <a href="{{ url_for('index') }}" class="nav-brand text-decoration-none">
+                    <div class="brand-icon">
+                        <i class="bi bi-stars text-white"></i>
+                    </div>
+                    <span>
+                        <span class="brand-rise">RISE</span>
+                        <span class="brand-ai"> AI</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="d-none d-lg-flex align-items-center gap-1">
+                    <a href="{{ url_for('index') }}" class="nav-link-rise {% if request.endpoint == 'index' %}active{% endif %}">Home</a>
+                    <a href="#about" class="nav-link-rise">About</a>
+                    <a href="#features" class="nav-link-rise">Features</a>
+                    <a href="#how" class="nav-link-rise">How It Works</a>
+                    <a href="{{ url_for('contact') }}" class="nav-link-rise {% if request.endpoint == 'contact' %}active{% endif %}">Contact</a>
+                </div>
+
+                <div class="d-flex align-items-center gap-2">
+                    <a href="#assistant" class="btn-nav-cta d-none d-md-inline-flex align-items-center gap-2 text-decoration-none">
+                        <i class="bi bi-stars"></i>
+                        Launch AI Assistant
+                    </a>
+                    <!-- Mobile toggler -->
+                    <button class="navbar-toggler-rise d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
+                        <i class="bi bi-list fs-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Nav -->
+            <div class="collapse" id="mobileNav">
+                <div class="d-flex flex-column gap-1 py-3 border-top mt-3" style="border-color: var(--border-subtle) !important;">
+                    <a href="{{ url_for('index') }}" class="nav-link-rise">Home</a>
+                    <a href="#about" class="nav-link-rise">About</a>
+                    <a href="#features" class="nav-link-rise">Features</a>
+                    <a href="#how" class="nav-link-rise">How It Works</a>
+                    <a href="{{ url_for('contact') }}" class="nav-link-rise">Contact</a>
+                    <a href="#assistant" class="btn-primary-rise mt-2 justify-content-center text-decoration-none">
+                        <i class="bi bi-stars"></i>Launch AI Assistant
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════
+         PAGE CONTENT
+    ═══════════════════════════════════════════════════ -->
+    {% block content %}{% endblock %}
+
+    <!-- ═══════════════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════════════ -->
+    <footer class="footer-rise">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Brand Column -->
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <div class="footer-brand-icon">
+                            <i class="bi bi-stars text-white" style="font-size:0.75rem;"></i>
+                        </div>
+                        RISE AI
+                    </div>
+                    <p class="footer-tagline">
+                        Resume, Interview &amp; Skill Enhancement AI — powered by IBM watsonx Orchestrate with Retrieval-Augmented Generation.
+                    </p>
+                    <div class="mt-3 d-flex flex-column gap-1">
+                        <div class="footer-badge"><i class="bi bi-cpu-fill me-1"></i> Powered by IBM watsonx Orchestrate</div>
+                        <div class="footer-badge"><i class="bi bi-robot me-1"></i> IBM BOB Generated Frontend</div>
+                        <div class="footer-badge"><i class="bi bi-search me-1"></i> RAG Knowledge Base</div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="col-6 col-lg-2">
+                    <p class="footer-heading">Product</p>
+                    <a href="#about" class="footer-link">About RISE AI</a>
+                    <a href="#features" class="footer-link">Features</a>
+                    <a href="#how" class="footer-link">How It Works</a>
+                    <a href="#technology" class="footer-link">Technology</a>
+                    <a href="#assistant" class="footer-link">AI Assistant</a>
+                </div>
+
+                <!-- Resources -->
+                <div class="col-6 col-lg-2">
+                    <p class="footer-heading">Resources</p>
+                    <a href="https://www.ibm.com/watsonx" class="footer-link" target="_blank">IBM watsonx</a>
+                    <a href="https://www.ibm.com/products/watsonx-orchestrate" class="footer-link" target="_blank">watsonx Orchestrate</a>
+                    <a href="{{ url_for('contact') }}" class="footer-link">Contact Us</a>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="col-lg-4">
+                    <p class="footer-heading">Built With</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="footer-badge" style="font-size:0.68rem;">Python Flask</span>
+                        <span class="footer-badge" style="font-size:0.68rem;">HTML5</span>
+                        <span class="footer-badge" style="font-size:0.68rem;">Bootstrap 5</span>
+                        <span class="footer-badge" style="font-size:0.68rem;">CSS3</span>
+                        <span class="footer-badge" style="font-size:0.68rem;">JavaScript</span>
+                        <span class="footer-badge" style="font-size:0.68rem;">Jinja2</span>
+                        <span class="footer-badge" style="font-size:0.68rem;">IBM watsonx</span>
+                        <span class="footer-badge" style="font-size:0.68rem;">RAG</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2025 RISE AI &mdash; Resume, Interview &amp; Skill Enhancement AI.
+                    Powered by <strong>IBM watsonx Orchestrate</strong>.
+                </p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="{{ url_for('contact') }}">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<div id="root"></div>
+    <!-- ═══════════════════════════════════════════════════
+         IBM WATSONX ORCHESTRATE EMBEDDED AGENT
+         ─────────────────────────────────────────────────
+         Paste the official IBM watsonx Orchestrate
+         Embedded Agent script snippet below.
+         The widget will appear as a floating button in
+         the bottom-right corner of every page.
+    ═══════════════════════════════════════════════════ -->
+
+    <!-- IBM watsonx Orchestrate Embedded Agent -->
+
+<script>
+  window.wxOConfiguration = {
+    orchestrationID: "55e45023b22641feab42b2c4fc4bd13b_e526b27f-ef21-4df2-adfe-0f2e9da91143",
+    hostURL: "https://au-syd.watson-orchestrate.cloud.ibm.com",
+    rootElementID: "root",
+    deploymentPlatform: "ibmcloud",
+    crn: "crn:v1:bluemix:public:watsonx-orchestrate:au-syd:a/55e45023b22641feab42b2c4fc4bd13b:e526b27f-ef21-4df2-adfe-0f2e9da91143::",
+    chatOptions: {
+        agentId: "f7f3d87f-f51a-402d-867f-50eeb608d05d", 
+        agentEnvironmentId: "a797190c-aa97-40d2-ab77-d2e1e0be5722",
+    }
+  };
+  setTimeout(function () {
+    const script = document.createElement('script');
+    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+    script.addEventListener('load', function () {
+        wxoLoader.init();
+    });
+    document.head.appendChild(script);
+  }, 0);                     
+</script>
+
+    <!-- End IBM watsonx Orchestrate Embedded Agent -->
+
+    <!-- Live indicator pill -->
+    <div class="agent-live-pill">
+        <span class="live-dot"></span>
+        RISE AI &bull; Live
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_scripts %}{% endblock %}
+
+</body>
+</html>

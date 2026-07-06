@@ -1,0 +1,645 @@
+{% extends "base.html" %}
+{% block title %}RISE AI — Elevate Your Career with IBM watsonx Orchestrate{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO SECTION
+═══════════════════════════════════════════════════════════ -->
+<section class="hero-section" id="home">
+    <!-- Background layers -->
+    <div class="hero-grid"></div>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-glow-3"></div>
+    <div class="hero-particles"></div>
+
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <!-- Left: Hero Copy -->
+            <div class="col-lg-7 hero-content">
+                <div class="hero-eyebrow">
+                    <span class="dot"></span>
+                    Powered by IBM watsonx Orchestrate
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="line-plain">Elevate Your</span><br />
+                    <span class="line-gradient">Career with AI</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    RISE AI is an intelligent Career Assistant powered by <strong style="color:var(--text-primary);">IBM watsonx Orchestrate</strong>
+                    using Retrieval-Augmented Generation (RAG) to help students and professionals improve resumes,
+                    prepare for interviews, discover skill gaps, and accelerate career growth.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#assistant" class="btn-primary-rise text-decoration-none">
+                        <i class="bi bi-stars"></i>
+                        Launch AI Assistant
+                    </a>
+                    <a href="#about" class="btn-secondary-rise text-decoration-none">
+                        <i class="bi bi-arrow-down-circle"></i>
+                        Learn More
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="stat-value">IBM</div>
+                        <div class="stat-label">watsonx Orchestrate</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-value">RAG</div>
+                        <div class="stat-label">Knowledge Base</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-value">6+</div>
+                        <div class="stat-label">Career Capabilities</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-value">AI</div>
+                        <div class="stat-label">Career Guidance</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Floating Visual Cards -->
+            <div class="col-lg-5 hero-visual position-relative">
+
+                <!-- Card 1: Resume Analysis -->
+                <div class="hero-card-float mb-3">
+                    <div class="card-float-label">
+                        <i class="bi bi-file-earmark-text me-1"></i>Resume Intelligence
+                    </div>
+                    <div class="card-float-title">Analysing Resume Against Target Role</div>
+                    <div class="mb-1" style="font-size:0.72rem;color:var(--text-muted);">Skills Match</div>
+                    <div class="card-float-bar"><div class="card-float-bar-fill" style="width:82%;"></div></div>
+                    <div class="mb-1" style="font-size:0.72rem;color:var(--text-muted);">Experience Alignment</div>
+                    <div class="card-float-bar"><div class="card-float-bar-fill" style="width:68%;animation-delay:0.3s;"></div></div>
+                    <div class="mb-1" style="font-size:0.72rem;color:var(--text-muted);">Keyword Coverage</div>
+                    <div class="card-float-bar"><div class="card-float-bar-fill" style="width:74%;animation-delay:0.6s;"></div></div>
+                    <div class="mt-2 d-flex gap-2 flex-wrap">
+                        <span style="font-size:0.68rem;padding:0.2rem 0.6rem;background:rgba(59,130,212,0.12);border-radius:50px;color:var(--ibm-blue-bright);border:1px solid rgba(59,130,212,0.2);">RAG Powered</span>
+                        <span style="font-size:0.68rem;padding:0.2rem 0.6rem;background:rgba(6,182,212,0.1);border-radius:50px;color:var(--ibm-cyan);border:1px solid rgba(6,182,212,0.2);">IBM watsonx</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Interview Prep -->
+                <div class="hero-card-float mb-3">
+                    <div class="card-float-label">
+                        <i class="bi bi-chat-dots me-1"></i>Interview Preparation
+                    </div>
+                    <div style="font-size:0.82rem;color:var(--text-secondary);line-height:1.6;">
+                        <div class="d-flex align-items-start gap-2 mb-2">
+                            <span style="color:var(--ibm-blue-bright);font-size:0.72rem;white-space:nowrap;margin-top:2px;">RISE AI</span>
+                            <span style="background:rgba(59,130,212,0.07);border-radius:8px;padding:0.35rem 0.65rem;font-size:0.78rem;border:1px solid rgba(59,130,212,0.12);">"Tell me about a time you led a project under pressure."</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <span style="color:var(--ibm-cyan);font-size:0.72rem;white-space:nowrap;">STAR Framework</span>
+                            <span style="font-size:0.75rem;color:var(--text-muted);">Behavioural template ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Skill Gap -->
+                <div class="hero-card-float">
+                    <div class="card-float-label">
+                        <i class="bi bi-graph-up-arrow me-1"></i>Skill Gap &amp; Learning Roadmap
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <span style="font-size:0.75rem;padding:0.3rem 0.7rem;background:rgba(124,92,216,0.12);border-radius:7px;color:var(--ibm-purple);border:1px solid rgba(124,92,216,0.2);">Python Advanced</span>
+                        <span style="font-size:0.75rem;padding:0.3rem 0.7rem;background:rgba(6,182,212,0.1);border-radius:7px;color:var(--ibm-cyan);border:1px solid rgba(6,182,212,0.2);">System Design</span>
+                        <span style="font-size:0.75rem;padding:0.3rem 0.7rem;background:rgba(59,130,212,0.1);border-radius:7px;color:var(--ibm-blue-bright);border:1px solid rgba(59,130,212,0.2);">Cloud Architecture</span>
+                        <span style="font-size:0.75rem;padding:0.3rem 0.7rem;background:rgba(14,165,233,0.1);border-radius:7px;color:var(--ibm-teal);border:1px solid rgba(14,165,233,0.2);">Leadership</span>
+                    </div>
+                    <div class="mt-2" style="font-size:0.72rem;color:var(--text-muted);">AI-curated learning path generated</div>
+                </div>
+
+                <!-- Floating badges -->
+                
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     ABOUT SECTION
+═══════════════════════════════════════════════════════════ -->
+<section class="about-section" id="about">
+    <div class="container">
+
+        <div class="row align-items-center g-5 mb-5">
+            <div class="col-lg-5 reveal">
+                <span class="section-eyebrow">What is RISE AI?</span>
+                <h2 class="section-title">Your Intelligent<br /><span class="text-gradient">Career Partner</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    RISE AI is an AI-powered Career Assistant built on <strong style="color:var(--text-primary);">IBM watsonx Orchestrate</strong>.
+                    It leverages Retrieval-Augmented Generation (RAG) to ground every response in a curated knowledge base —
+                    delivering accurate, context-aware career guidance tailored to your unique profile.
+                </p>
+                <p class="section-subtitle mt-3">
+                    Whether you are a student entering the workforce or a professional targeting your next role,
+                    RISE AI acts as your always-on career advisor, resume coach, and interview trainer — all in one conversation.
+                </p>
+                <div class="mt-4 d-flex flex-wrap gap-2">
+                    <span style="padding:0.4rem 1rem;border-radius:50px;font-size:0.78rem;font-weight:600;background:rgba(59,130,212,0.1);border:1px solid rgba(59,130,212,0.2);color:var(--ibm-blue-bright);">
+                        <i class="bi bi-cpu me-1"></i>IBM watsonx Orchestrate
+                    </span>
+                    <span style="padding:0.4rem 1rem;border-radius:50px;font-size:0.78rem;font-weight:600;background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.2);color:var(--ibm-cyan);">
+                        <i class="bi bi-search me-1"></i>RAG Knowledge Base
+                    </span>
+                    <span style="padding:0.4rem 1rem;border-radius:50px;font-size:0.78rem;font-weight:600;background:rgba(124,92,216,0.1);border:1px solid rgba(124,92,216,0.2);color:var(--ibm-purple);">
+                        <i class="bi bi-chat-square-text me-1"></i>Natural Language AI
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-lg-7 reveal reveal-delay-2">
+                <div class="row g-3">
+                    {% set capabilities = [
+                        ("bi-file-earmark-text", "blue", "Resume Analysis", "Deep analysis of your resume with actionable suggestions aligned to your target role and industry standards."),
+                        ("bi-arrow-left-right", "cyan", "Resume & Role Matching", "Intelligent matching of your resume against target job descriptions to identify alignment gaps and strengths."),
+                        ("bi-mic", "purple", "Interview Preparation", "Comprehensive mock interview support covering Technical, HR, and Behavioural question frameworks."),
+                        ("bi-graph-up-arrow", "teal", "Skill Gap Identification", "Identifies missing skills between your current profile and your target role with precision."),
+                        ("bi-map", "blue", "Learning Roadmap", "Personalised, step-by-step learning path with recommended resources to bridge your skill gaps."),
+                        ("bi-compass", "cyan", "Career Guidance", "Strategic career advice, job transition planning, and professional growth direction."),
+                        ("bi-database", "purple", "RAG Knowledge Base", "All responses grounded in a curated career knowledge base via Retrieval-Augmented Generation."),
+                        ("bi-patch-question", "teal", "Technical & HR Questions", "Industry-specific technical question banks and HR scenario frameworks for complete interview readiness."),
+                    ] %}
+                    {% for icon, color, title, desc in capabilities %}
+                    <div class="col-sm-6">
+                        <div class="about-capability-card">
+                            <div class="cap-icon {{ color }}">
+                                <i class="bi {{ icon }}"></i>
+                            </div>
+                            <div class="cap-title">{{ title }}</div>
+                            <div class="cap-desc">{{ desc }}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- IBM watsonx Banner -->
+        <div class="glass-card p-4 reveal">
+            <div class="row align-items-center g-3">
+                <div class="col-md-1 text-center">
+                    <div style="width:52px;height:52px;background:var(--gradient-ibm);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto;">
+                        <i class="bi bi-cpu-fill text-white fs-5"></i>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--ibm-blue-bright);font-weight:700;margin-bottom:4px;">Core Engine</div>
+                    <div style="font-size:1rem;font-weight:700;color:var(--text-primary);">IBM watsonx Orchestrate</div>
+                    <div style="font-size:0.82rem;color:var(--text-secondary);margin-top:4px;">
+                        Enterprise-grade AI orchestration with RAG grounding, multi-step reasoning, and personalised career intelligence — all within a secure, governed AI framework.
+                    </div>
+                </div>
+                <div class="col-md-3 text-md-end">
+                    <a href="https://www.ibm.com/products/watsonx-orchestrate" target="_blank" class="btn-secondary-rise text-decoration-none d-inline-flex" style="font-size:0.8rem;padding:0.55rem 1.1rem;">
+                        Learn about watsonx <i class="bi bi-arrow-up-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FEATURES SECTION
+═══════════════════════════════════════════════════════════ -->
+<section class="features-section" id="features">
+    <div class="container">
+
+        <div class="text-center mb-5 reveal">
+            <span class="section-eyebrow">Capabilities</span>
+            <h2 class="section-title">Everything You Need to<br /><span class="text-gradient">Advance Your Career</span></h2>
+            <p class="section-subtitle mx-auto">
+                RISE AI delivers a comprehensive suite of AI-powered career tools, all accessible through a single natural language conversation with IBM watsonx Orchestrate.
+            </p>
+        </div>
+
+        {% set features = [
+            ("bi-file-earmark-text-fill", "gradient-blue", "Resume Analysis",
+             "Receive a thorough, AI-driven evaluation of your resume including clarity, impact statements, formatting, and keyword optimisation aligned to your industry."),
+            ("bi-arrow-left-right", "gradient-cyan", "Resume Match",
+             "Upload your resume and target job description for a detailed compatibility analysis. Understand exactly what aligns and what needs strengthening."),
+            ("bi-mic-fill", "gradient-purple", "Interview Preparation",
+             "Practice with curated Technical, HR, and Behavioural interview questions powered by IBM watsonx — with structured response guidance."),
+            ("bi-patch-check-fill", "gradient-teal", "ATS Resume Suggestions",
+             "Get specific, actionable recommendations to optimise your resume for Applicant Tracking Systems used by modern hiring pipelines."),
+            ("bi-compass-fill", "gradient-blue", "Career Guidance",
+             "Receive personalised career strategy advice including role transitions, industry pivots, and professional growth planning from AI grounded in real career knowledge."),
+            ("bi-lightbulb-fill", "gradient-cyan", "Skill Recommendations",
+             "Discover the exact skills you need to develop based on your current profile, target role, and industry trends — with prioritised guidance."),
+            ("bi-map-fill", "gradient-purple", "Learning Roadmaps",
+             "RISE AI generates a structured, step-by-step learning path tailored to your skill gaps, with curated resource recommendations and milestones."),
+            ("bi-question-circle-fill", "gradient-teal", "Technical & HR Questions",
+             "Access thousands of domain-specific technical questions and HR scenario frameworks, structured by role, seniority, and industry."),
+            ("bi-people-fill", "gradient-blue", "Behavioural Questions",
+             "Master behavioural interviews using the STAR framework. RISE AI coaches you through situation, task, action, and result structuring."),
+            ("bi-chat-left-dots-fill", "gradient-cyan", "AI Conversation",
+             "A natural, flowing conversation interface powered by IBM watsonx Orchestrate — ask anything career-related and receive intelligent, contextual responses."),
+            ("bi-database-fill-gear", "gradient-purple", "Knowledge Base Powered",
+             "All responses are grounded in a curated career knowledge base using RAG, ensuring accuracy, depth, and relevance beyond generic LLM outputs."),
+            ("bi-search-heart", "gradient-teal", "RAG Search",
+             "Retrieval-Augmented Generation retrieves the most relevant knowledge chunks before generating your personalised response — ensuring factual, grounded answers."),
+        ] %}
+
+        <div class="row g-4">
+            {% for icon, gradient, title, desc in features %}
+            <div class="col-sm-6 col-lg-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon-wrap {{ gradient }}">
+                        <i class="bi {{ icon }}"></i>
+                    </div>
+                    <div class="feature-title">{{ title }}</div>
+                    <div class="feature-desc">{{ desc }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HOW IT WORKS
+═══════════════════════════════════════════════════════════ -->
+<section class="how-section" id="how">
+    <div class="container">
+
+        <div class="text-center mb-5 reveal">
+            <span class="section-eyebrow">Workflow</span>
+            <h2 class="section-title">How <span class="text-gradient">RISE AI</span> Works</h2>
+            <p class="section-subtitle mx-auto">
+                Six simple steps to transform your career trajectory using IBM watsonx Orchestrate and RAG-powered intelligence.
+            </p>
+        </div>
+
+        {% set steps = [
+            ("bi-cursor-fill", "1", "Launch AI Assistant", "Click the IBM watsonx Orchestrate assistant button in the bottom-right corner of the screen to open the chat interface."),
+            ("bi-file-earmark-arrow-up", "2", "Share Your Context", "Paste your resume text or describe your background, target role, and career goals directly in the chat."),
+            ("bi-chat-text-fill", "3", "Ask Naturally", "Type your question in plain English — resume review, interview prep, skill gap, or career advice."),
+            ("bi-database-fill", "4", "RAG Knowledge Retrieval", "RISE AI's RAG pipeline retrieves the most relevant knowledge from the curated career knowledge base."),
+            ("bi-cpu-fill", "5", "watsonx Generates Response", "IBM watsonx Orchestrate processes retrieved context and generates a personalised, accurate career response."),
+            ("bi-arrow-repeat", "6", "Continue the Conversation", "Ask follow-up questions, drill deeper into topics, and refine your career strategy through continued dialogue."),
+        ] %}
+
+        <div class="row g-4 steps-track">
+            {% for icon, num, title, desc in steps %}
+            <div class="col-sm-6 col-lg-4 reveal reveal-delay-{{ loop.index }}">
+                <div class="step-card">
+                    <div class="step-number-ring">
+                        <i class="bi {{ icon }}" style="color:var(--ibm-blue-bright);font-size:1.1rem;"></i>
+                        <span class="step-num-label">{{ num }}</span>
+                    </div>
+                    <div class="step-title">{{ title }}</div>
+                    <div class="step-desc">{{ desc }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     TECHNOLOGY SECTION
+═══════════════════════════════════════════════════════════ -->
+<section class="tech-section" id="technology">
+    <div class="container">
+
+        <div class="text-center mb-5 reveal">
+            <span class="section-eyebrow">Tech Stack</span>
+            <h2 class="section-title">Built on Enterprise-Grade<br /><span class="text-gradient">Technology</span></h2>
+            <p class="section-subtitle mx-auto">
+                RISE AI is engineered with a robust, production-ready stack — combining IBM enterprise AI with modern web technologies.
+            </p>
+        </div>
+
+        {% set techs = [
+            ("ibm-style", "wxO", "IBM watsonx Orchestrate", "AI orchestration engine", "Core AI Engine"),
+            ("bi-robot", None, "IBM BOB", "AI-generated frontend", "Frontend Generator"),
+            ("bi-search", None, "RAG", "Retrieval-Augmented Generation", "Knowledge Retrieval"),
+            ("bi-filetype-py", None, "Python Flask", "Backend web framework", "Backend"),
+            ("bi-filetype-html", None, "HTML5", "Semantic markup", "Frontend"),
+            ("bi-filetype-css", None, "CSS3", "Advanced styling & animations", "Styling"),
+            ("bi-bootstrap", None, "Bootstrap 5", "Responsive UI framework", "UI Framework"),
+            ("bi-filetype-js", None, "JavaScript", "Interactive functionality", "Frontend Logic"),
+            ("bi-phone-landscape", None, "Responsive Design", "Mobile-first, all devices", "UX"),
+        ] %}
+
+        <div class="row g-4">
+            {% for logo_class, logo_text, name, tagline, badge in techs %}
+            <div class="col-6 col-sm-4 col-lg-3">
+                <div class="tech-card">
+                    <div class="tech-logo {{ logo_class if logo_text else '' }}" style="{% if not logo_text %}background:rgba(59,130,212,0.1);color:var(--ibm-blue-bright);border:1px solid rgba(59,130,212,0.15);{% endif %}">
+                        {% if logo_text %}
+                            {{ logo_text }}
+                        {% else %}
+                            <i class="bi {{ logo_class }}"></i>
+                        {% endif %}
+                    </div>
+                    <div class="tech-name">{{ name }}</div>
+                    <div class="tech-tagline">{{ tagline }}</div>
+                    <div class="tech-badge">{{ badge }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     WHY CHOOSE RISE AI
+═══════════════════════════════════════════════════════════ -->
+<section class="why-section" id="why">
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+            <div class="col-lg-4 reveal">
+                <span class="section-eyebrow">Why RISE AI?</span>
+                <h2 class="section-title">Career Intelligence<br /><span class="text-gradient">Reimagined</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Unlike generic AI chatbots, RISE AI is purpose-built for career development — grounded in real career knowledge, powered by IBM enterprise AI, and designed to deliver personalised, actionable guidance.
+                </p>
+            </div>
+
+            <div class="col-lg-8 reveal reveal-delay-2">
+                <div class="row g-3">
+                    {% set why_items = [
+                        ("bi-person-check-fill", "Personalised AI Guidance", "Every response is tailored to your unique background, skills, and career goals — not generic advice."),
+                        ("bi-file-earmark-check-fill", "Resume Improvement", "Receive specific, actionable improvements backed by industry knowledge and ATS optimisation expertise."),
+                        ("bi-graph-up-arrow", "Career Growth Strategy", "Strategic guidance on navigating career transitions, promotions, and long-term professional development."),
+                        ("bi-shield-check-fill", "Interview Readiness", "Comprehensive preparation across Technical, HR, and Behavioural interviews with structured frameworks."),
+                        ("bi-lightbulb-fill", "Skill Enhancement", "Identify exactly what to learn and how to learn it — with a structured roadmap aligned to your goals."),
+                        ("bi-database-fill-check", "Knowledge Base Powered", "Responses grounded in curated career intelligence via RAG — not hallucinated, not generic."),
+                        ("bi-lightning-charge-fill", "Fast, Intelligent Responses", "IBM watsonx Orchestrate delivers rapid, high-quality responses without sacrificing depth or accuracy."),
+                        ("bi-stars", "Modern AI Experience", "A sleek, intuitive conversational interface that makes career guidance feel effortless and engaging."),
+                    ] %}
+                    {% for icon, title, desc in why_items %}
+                    <div class="col-sm-6">
+                        <div class="why-card">
+                            <div class="why-icon">
+                                <i class="bi {{ icon }}"></i>
+                            </div>
+                            <div class="why-content">
+                                <div class="why-title">{{ title }}</div>
+                                <div class="why-desc">{{ desc }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     AI ASSISTANT SECTION
+═══════════════════════════════════════════════════════════ -->
+<section class="assistant-section" id="assistant">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 reveal">
+                <div class="assistant-main-card">
+
+                    <div class="assistant-glow-ring">
+                        <i class="bi bi-stars ring-icon"></i>
+                    </div>
+
+                    <h2 class="assistant-card-title">Start Your AI Career Journey</h2>
+                    <p class="assistant-card-desc">
+                        The <strong style="color:var(--text-primary);">IBM watsonx Orchestrate AI Assistant</strong> is your gateway to personalised career intelligence.
+                        Click the button in the <strong style="color:var(--ibm-blue-bright);">bottom-right corner</strong> of the screen to begin chatting with RISE AI.
+                    </p>
+
+                    <!-- Arrow pointing to bottom right -->
+                    <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                        <span style="font-size:0.82rem;color:var(--text-secondary);">The assistant is located</span>
+                        <div class="corner-pointer">
+                            <div class="corner-arrow">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span>Bottom Right Corner</span>
+                        </div>
+                        <i class="bi bi-arrow-down-right" style="color:var(--ibm-blue-bright);font-size:1.1rem;"></i>
+                    </div>
+
+                    <div class="corner-hint d-inline-flex">
+                        <span class="dot-live"></span>
+                        IBM watsonx Orchestrate agent is live and ready to assist with your career questions
+                    </div>
+
+                    <div class="mt-4 row g-3 justify-content-center">
+                        <div class="col-auto">
+                            <div style="background:rgba(59,130,212,0.07);border:1px solid rgba(59,130,212,0.15);border-radius:10px;padding:0.6rem 1rem;font-size:0.78rem;color:var(--text-secondary);">
+                                <i class="bi bi-file-earmark-text me-1" style="color:var(--ibm-blue-bright);"></i>Resume Analysis
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div style="background:rgba(124,92,216,0.07);border:1px solid rgba(124,92,216,0.15);border-radius:10px;padding:0.6rem 1rem;font-size:0.78rem;color:var(--text-secondary);">
+                                <i class="bi bi-mic me-1" style="color:var(--ibm-purple);"></i>Interview Prep
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div style="background:rgba(6,182,212,0.07);border:1px solid rgba(6,182,212,0.15);border-radius:10px;padding:0.6rem 1rem;font-size:0.78rem;color:var(--text-secondary);">
+                                <i class="bi bi-graph-up me-1" style="color:var(--ibm-cyan);"></i>Skill Gap
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div style="background:rgba(14,165,233,0.07);border:1px solid rgba(14,165,233,0.15);border-radius:10px;padding:0.6rem 1rem;font-size:0.78rem;color:var(--text-secondary);">
+                                <i class="bi bi-map me-1" style="color:var(--ibm-teal);"></i>Learning Roadmap
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PROJECT ARCHITECTURE
+═══════════════════════════════════════════════════════════ -->
+<section class="arch-section" id="architecture">
+    <div class="container">
+
+        <div class="text-center mb-5 reveal">
+            <span class="section-eyebrow">Architecture</span>
+            <h2 class="section-title">System <span class="text-gradient">Architecture</span></h2>
+            <p class="section-subtitle mx-auto">
+                RISE AI's end-to-end architecture — from user interaction to IBM watsonx Orchestrate's AI-powered response generation.
+            </p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-5 reveal">
+                <div class="arch-diagram">
+
+                    <!-- Node: User -->
+                    <div class="arch-node active-node">
+                        <div class="arch-node-icon" style="background:rgba(59,130,212,0.12);color:var(--ibm-blue-bright);">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <div class="arch-node-text">
+                            <div class="node-label">Entry Point</div>
+                            <div class="node-title">User</div>
+                        </div>
+                    </div>
+
+                    <div class="arch-connector">
+                        <div class="arch-connector-line"></div>
+                        <div class="arch-connector-dot"></div>
+                        <div class="arch-connector-line"></div>
+                    </div>
+
+                    <!-- Node: RISE AI Website -->
+                    <div class="arch-node active-node">
+                        <div class="arch-node-icon" style="background:rgba(124,92,216,0.12);color:var(--ibm-purple);">
+                            <i class="bi bi-globe2"></i>
+                        </div>
+                        <div class="arch-node-text">
+                            <div class="node-label">Flask Application</div>
+                            <div class="node-title">RISE AI Website</div>
+                        </div>
+                    </div>
+
+                    <div class="arch-connector">
+                        <div class="arch-connector-line"></div>
+                        <div class="arch-connector-dot"></div>
+                        <div class="arch-connector-line"></div>
+                    </div>
+
+                    <!-- Node: watsonx Orchestrate -->
+                    <div class="arch-node active-node">
+                        <div class="arch-node-icon" style="background:var(--gradient-ibm);color:#fff;border-radius:10px;">
+                            <i class="bi bi-cpu-fill"></i>
+                        </div>
+                        <div class="arch-node-text">
+                            <div class="node-label">AI Engine</div>
+                            <div class="node-title">IBM watsonx Orchestrate</div>
+                        </div>
+                    </div>
+
+                    <div class="arch-connector">
+                        <div class="arch-connector-line"></div>
+                        <div class="arch-connector-dot"></div>
+                        <div class="arch-connector-line"></div>
+                    </div>
+
+                    <!-- Node: RAG -->
+                    <div class="arch-node active-node">
+                        <div class="arch-node-icon" style="background:rgba(6,182,212,0.12);color:var(--ibm-cyan);">
+                            <i class="bi bi-database-fill-gear"></i>
+                        </div>
+                        <div class="arch-node-text">
+                            <div class="node-label">Retrieval Layer</div>
+                            <div class="node-title">RAG Knowledge Base</div>
+                        </div>
+                    </div>
+
+                    <div class="arch-connector">
+                        <div class="arch-connector-line"></div>
+                        <div class="arch-connector-dot"></div>
+                        <div class="arch-connector-line"></div>
+                    </div>
+
+                    <!-- Node: AI Response -->
+                    <div class="arch-node active-node">
+                        <div class="arch-node-icon" style="background:rgba(14,165,233,0.12);color:var(--ibm-teal);">
+                            <i class="bi bi-chat-left-dots-fill"></i>
+                        </div>
+                        <div class="arch-node-text">
+                            <div class="node-label">Output</div>
+                            <div class="node-title">AI Generated Response</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Architecture Description -->
+            <div class="col-lg-6 offset-lg-1 reveal reveal-delay-2">
+                <div class="d-flex flex-column gap-3 mt-4 mt-lg-0">
+
+                    <div class="glass-card p-3 d-flex gap-3 align-items-start">
+                        <div style="width:36px;height:36px;background:rgba(59,130,212,0.1);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--ibm-blue-bright);">
+                            <i class="bi bi-1-circle-fill"></i>
+                        </div>
+                        <div>
+                            <div style="font-size:0.85rem;font-weight:700;color:var(--text-primary);margin-bottom:3px;">User Interaction</div>
+                            <div style="font-size:0.78rem;color:var(--text-secondary);">User interacts with the RISE AI website and opens the IBM watsonx Orchestrate embedded agent.</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-3 d-flex gap-3 align-items-start">
+                        <div style="width:36px;height:36px;background:rgba(124,92,216,0.1);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--ibm-purple);">
+                            <i class="bi bi-2-circle-fill"></i>
+                        </div>
+                        <div>
+                            <div style="font-size:0.85rem;font-weight:700;color:var(--text-primary);margin-bottom:3px;">Flask Backend</div>
+                            <div style="font-size:0.78rem;color:var(--text-secondary);">Python Flask serves the web application and hosts the embedded watsonx Orchestrate agent interface.</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-3 d-flex gap-3 align-items-start">
+                        <div style="width:36px;height:36px;background:var(--gradient-ibm);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;">
+                            <i class="bi bi-3-circle-fill"></i>
+                        </div>
+                        <div>
+                            <div style="font-size:0.85rem;font-weight:700;color:var(--text-primary);margin-bottom:3px;">watsonx Orchestrate Agent</div>
+                            <div style="font-size:0.78rem;color:var(--text-secondary);">IBM watsonx Orchestrate receives the user's query and initiates the RAG retrieval pipeline.</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-3 d-flex gap-3 align-items-start">
+                        <div style="width:36px;height:36px;background:rgba(6,182,212,0.1);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--ibm-cyan);">
+                            <i class="bi bi-4-circle-fill"></i>
+                        </div>
+                        <div>
+                            <div style="font-size:0.85rem;font-weight:700;color:var(--text-primary);margin-bottom:3px;">RAG Knowledge Retrieval</div>
+                            <div style="font-size:0.78rem;color:var(--text-secondary);">The RAG layer retrieves relevant career knowledge chunks, grounding the AI in accurate domain information.</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-3 d-flex gap-3 align-items-start">
+                        <div style="width:36px;height:36px;background:rgba(14,165,233,0.1);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--ibm-teal);">
+                            <i class="bi bi-5-circle-fill"></i>
+                        </div>
+                        <div>
+                            <div style="font-size:0.85rem;font-weight:700;color:var(--text-primary);margin-bottom:3px;">Personalised AI Response</div>
+                            <div style="font-size:0.78rem;color:var(--text-secondary);">A contextually accurate, personalised career response is generated and delivered to the user in real time.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

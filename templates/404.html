@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}404 — Page Not Found · RISE AI{% endblock %}
+{% block content %}
+<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;">
+    <div>
+        <div style="font-size:5rem;font-weight:900;background:linear-gradient(135deg,#3b82d4,#5b9cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:1rem;">404</div>
+        <h1 style="font-size:1.5rem;font-weight:700;color:var(--text-primary);margin-bottom:0.75rem;">Page Not Found</h1>
+        <p style="color:var(--text-secondary);margin-bottom:2rem;">The page you're looking for doesn't exist.</p>
+        <a href="{{ url_for('index') }}" class="btn-primary-rise text-decoration-none">
+            <i class="bi bi-house me-2"></i>Back to Home
+        </a>
+    </div>
+</div>
+{% endblock %}
