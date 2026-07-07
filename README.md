@@ -1,130 +1,343 @@
-# RISE AI — Resume, Interview & Skill Enhancement AI
+# 🚀 RISE AI — Resume, Interview & Skill Enhancement AI
 
-> **Powered by IBM watsonx Orchestrate · RAG Knowledge Base · Python Flask**
+> **An AI-powered career assistant built with IBM watsonx Orchestrate, Retrieval-Augmented Generation (RAG), Python Flask, and IBM BOB.**
 
-RISE AI is a production-quality AI Career Assistant web application that uses
-IBM watsonx Orchestrate (with Retrieval-Augmented Generation) as its core intelligence engine.
-The website professionally introduces the product and directs users to interact with the embedded
-IBM watsonx Orchestrate AI agent.
+## 🌐 Live Demo
+
+**https://rise-ai-pm3b.onrender.com/**
 
 ---
 
-## Project Structure
+# 📖 Overview
+
+RISE AI is an AI-powered career assistance platform designed to help students and job seekers prepare for placements and interviews through intelligent AI conversations.
+
+The application provides a modern web interface integrated with an embedded IBM watsonx Orchestrate AI agent. Using Retrieval-Augmented Generation (RAG), the assistant retrieves relevant information from a curated knowledge base to provide accurate and contextual career guidance.
+
+The project was developed as part of the **IBM SkillsBuild Internship** using **IBM watsonx Orchestrate**.
+
+---
+
+# ✨ Key Features
+
+- 📄 Resume Analysis
+- 🎯 Resume–Target Role Match Guidance
+- 💼 Interview Preparation
+- ❓ Technical & HR Interview Assistance
+- 🧠 AI-powered Career Question Answering
+- 📚 Retrieval-Augmented Generation (RAG)
+- 🤖 IBM watsonx Orchestrate Embedded AI Assistant
+- 🌐 Responsive Modern Web Interface
+
+---
+
+# 📷 Screenshots
+
+> Add screenshots inside a `screenshots` folder.
+
+## RISE AI
 
 ```
+screenshots/rise_ai.png
+```
+
+## Home Page
+
+```
+screenshots/home.png
+```
+
+## About Section
+
+```
+screenshots/about.png
+```
+
+## HOW IT WORKS
+
+```
+screenshots/how_it_works.png
+```
+
+## AI Assistant
+
+```
+screenshots/assistant.png
+```
+
+---
+
+# 🏗️ Project Structure
+
+```text
 rise-ai/
-├── app.py                     # Flask application entry point
-├── requirements.txt           # Python dependencies
+│
+├── app.py
+├── requirements.txt
+├── Procfile
+│
 ├── templates/
-│   ├── base.html              # Base layout (navbar, footer, embedded agent placeholder)
-│   ├── index.html             # Home page (all sections)
-│   └── contact.html           # Contact page
-└── static/
-    ├── css/
-    │   └── style.css          # Full futuristic dark-theme stylesheet
-    └── js/
-        └── main.js            # Scroll animations, particles, form handling
+│   ├── base.html
+│   ├── index.html
+│   └── contact.html
+│
+├── static/
+│   ├── css/
+│   │      style.css
+│   ├── js/
+│   │      main.js
+│   └── images/
+│
+└── README.md
 ```
 
 ---
 
-## Sections (Home Page)
+# ⚙️ Application Workflow
+
+```text
+                User
+                  │
+                  ▼
+        Flask Web Application
+                  │
+                  ▼
+      IBM watsonx Orchestrate Agent
+                  │
+                  ▼
+        RAG Knowledge Base
+                  │
+                  ▼
+        AI-generated Response
+                  │
+                  ▼
+     Embedded AI Assistant Widget
+```
+
+---
+
+# 🏛️ System Architecture
+
+```text
+             +----------------------+
+             |      User            |
+             +----------+-----------+
+                        |
+                        |
+                        ▼
+            +-----------------------+
+            | Flask Web Application |
+            +----------+------------+
+                       |
+                       ▼
+      +------------------------------------+
+      | IBM watsonx Orchestrate AI Agent   |
+      +----------------+-------------------+
+                       |
+                       ▼
+       +-----------------------------------+
+       | RAG Knowledge Base                |
+       +----------------+------------------+
+                        |
+                        ▼
+             AI Generated Response
+```
+
+---
+
+# 🧩 Home Page Sections
 
 | Section | Description |
-|---|---|
-| Hero | Animated hero with IBM watsonx badge, headline, CTA buttons, floating visual cards |
-| About | What is RISE AI — 8 capability cards explaining core features |
-| Features | 12 premium feature cards with hover animations |
-| How It Works | 6-step workflow with animated step cards |
-| Technology | 9 technology cards covering the full stack |
-| Why Choose RISE AI | 8 comparison cards highlighting differentiators |
-| AI Assistant | Animated section pointing to the embedded watsonx agent |
-| Architecture | Animated 5-node architecture diagram |
-| Footer | Full production footer with links, badges, copyright |
+|----------|-------------|
+| Hero | Introduction with CTA and IBM watsonx branding |
+| About | Overview of RISE AI |
+| Features | Core AI capabilities |
+| How It Works | Six-step application workflow |
+| Technology | Technologies used |
+| Why Choose RISE AI | Key advantages |
+| AI Assistant | Embedded IBM watsonx Orchestrate chatbot |
+| Architecture | System architecture diagram |
+| Footer | Links and project information |
 
 ---
 
-## IBM watsonx Orchestrate — Embedded Agent Setup
+# 🤖 IBM watsonx Orchestrate Integration
 
-Open `templates/base.html` and locate the clearly marked placeholder:
+The embedded AI assistant is integrated inside:
+
+```
+templates/base.html
+```
+
+Locate the placeholder:
 
 ```html
 <!-- IBM watsonx Orchestrate Embedded Agent -->
 
-<!-- ╔════════════════════════════════════════════════╗
-     ║  PASTE OFFICIAL EMBEDDED AGENT SCRIPT HERE    ║
-     ╚════════════════════════════════════════════════╝ -->
+Paste IBM watsonx Orchestrate Embedded Script Here
 
 <!-- End IBM watsonx Orchestrate Embedded Agent -->
 ```
 
-Paste your official IBM watsonx Orchestrate Embedded Agent `<script>` snippet inside this block.
-
-The agent widget size is controlled in `static/css/style.css`:
+The chatbot widget size can be customized inside:
 
 ```css
-:root {
-    --wxo-float-width: 620px;
-    --wxo-float-height: 900px;
+static/css/style.css
+```
+
+```css
+:root{
+    --wxo-float-width:620px;
+    --wxo-float-height:900px;
 }
 ```
 
 ---
 
-## Running Locally
+# 💻 Technologies Used
+
+| Category | Technology |
+|------------|------------------------------|
+| AI Platform | IBM watsonx Orchestrate |
+| Knowledge Retrieval | Retrieval-Augmented Generation (RAG) |
+| Backend | Python 3.11 |
+| Framework | Flask |
+| Frontend | HTML5 |
+| Styling | CSS3 |
+| UI Framework | Bootstrap 5 |
+| JavaScript | Vanilla JavaScript |
+| Templates | Jinja2 |
+| Icons | Bootstrap Icons |
+| Fonts | Google Fonts (Inter) |
+| Frontend Development | IBM BOB AI Assistant |
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
 
 ```bash
-# 1. Create and activate virtual environment
+git clone https://github.com/Abhinav00010/RISE-AI.git
+
+cd RISE-AI
+```
+
+---
+
+## Create Virtual Environment
+
+Windows
+
+```bash
 python -m venv venv
-venv\Scripts\activate        # Windows
-source venv/bin/activate     # macOS/Linux
 
-# 2. Install dependencies
+venv\Scripts\activate
+```
+
+Linux / macOS
+
+```bash
+python3 -m venv venv
+
+source venv/bin/activate
+```
+
+---
+
+## Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-# 3. Run development server
+---
+
+## Run Application
+
+```bash
 python app.py
 ```
 
-Visit `http://localhost:5000`
+Open
 
----
-
-## Running with Gunicorn (Production)
-
-```bash
-gunicorn -w 4 -b 0.0.0.0:8000 app:app
+```
+http://localhost:5000
 ```
 
 ---
 
-## Tech Stack
+# ☁️ Deployment
 
-| Layer | Technology |
-|---|---|
-| AI Engine | IBM watsonx Orchestrate |
-| Knowledge Retrieval | Retrieval-Augmented Generation (RAG) |
-| Backend | Python 3.11+ · Flask 3.x |
-| Templating | Jinja2 |
-| Frontend | HTML5 · Bootstrap 5.3 · CSS3 · JavaScript |
-| Icons | Bootstrap Icons |
-| Font | Inter (Google Fonts) |
-| Frontend Generated by | IBM BOB AI Assistant |
+The application is deployed on **Render**.
+
+Production Server
+
+```bash
+gunicorn app:app
+```
 
 ---
 
-## Design System
+# 📚 Knowledge Base
 
-- **Theme:** Dark futuristic AI SaaS
-- **Palette:** IBM Blue (`#3b82d4`), Cyan (`#06b6d4`), Purple (`#7c5cd8`), Deep Background (`#020408`)
-- **Effects:** Glassmorphism, animated grid, glowing borders, floating particles, scroll reveal
-- **Typography:** Inter, 700–900 weight headings
-- **Responsive:** Mobile-first, fully responsive across all screen sizes
+RISE AI uses a Retrieval-Augmented Generation (RAG) knowledge base connected to IBM watsonx Orchestrate.
+
+The knowledge base enables contextual responses for:
+
+- Resume Guidance
+- Interview Preparation
+- Career Advice
+- Technical Questions
+- HR Questions
 
 ---
 
-## License
+# 🎨 Design Highlights
 
-MIT License — RISE AI Project.
-Powered by IBM watsonx Orchestrate.
-Frontend generated by IBM BOB.
+- Dark Futuristic Theme
+- IBM-inspired Color Palette
+- Responsive Layout
+- Glassmorphism UI
+- Animated Components
+- Scroll Reveal Effects
+- Floating Cards
+- Modern Typography
+- Interactive Hover Animations
+
+---
+
+# 🔮 Future Enhancements
+
+- Resume PDF Upload
+- ATS Compatibility Analysis
+- Personalized Career Roadmaps
+- User Authentication
+- Dashboard
+- Progress Tracking
+- Mock Interview Analytics
+
+---
+
+# 👨‍💻 Developed For
+
+**IBM SkillsBuild Internship Project**
+
+Using
+
+- IBM watsonx Orchestrate
+- IBM RAG Knowledge Base
+- Python Flask
+- IBM BOB AI Assistant
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
