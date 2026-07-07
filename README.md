@@ -35,35 +35,25 @@ The project was developed as part of the **IBM SkillsBuild Internship** using **
 
 > Add screenshots inside a `screenshots` folder.
 
-## RISE AI
+### RISE AI
 
-```
-screenshots/rise_ai.png
-```
+![RISE AI](screenshots/rise_ai.png)
 
-## Home Page
+### Home Page
 
-```
-screenshots/home.png
-```
+![Home Page](screenshots/home.png)
 
-## About Section
+### About Section
 
-```
-screenshots/about.png
-```
+![About Section](screenshots/about.png)
 
-## HOW IT WORKS
+### How It Works
 
-```
-screenshots/how_it_works.png
-```
+![How It Works](screenshots/how_it_works.png)
 
-## AI Assistant
+### AI Assistant
 
-```
-screenshots/assistant.png
-```
+![AI Assistant](screenshots/assistant.png)
 
 ---
 
