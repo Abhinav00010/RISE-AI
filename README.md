@@ -53,7 +53,7 @@ The project was developed as part of the **IBM SkillsBuild Internship** using **
 
 ### AI Assistant
 
-![AI Assistant](screenshots/assistant.png)
+![AI Assistant](screenshots/ai_assistant.png)
 
 ---
 
